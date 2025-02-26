@@ -1,7 +1,7 @@
 
 import MatrixRain from "@/components/MatrixRain";
 import { Button } from "@/components/ui/button";
-import { Telegram, Discord, Twitter } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 
 const Index = () => {
   const communityTokens = {
@@ -59,26 +59,18 @@ const Index = () => {
             <Button
               variant="outline"
               className="flex items-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10"
-              onClick={() => window.open("https://t.me/your_channel", "_blank")}
+              onClick={() => window.open("https://example.com/link1", "_blank")}
             >
-              <Telegram className="w-5 h-5" />
-              Telegram
+              <ArrowRight className="w-5 h-5" />
+              Link 1
             </Button>
             <Button
               variant="outline"
               className="flex items-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10"
-              onClick={() => window.open("https://discord.gg/your_server", "_blank")}
+              onClick={() => window.open("https://example.com/link2", "_blank")}
             >
-              <Discord className="w-5 h-5" />
-              Discord
-            </Button>
-            <Button
-              variant="outline"
-              className="flex items-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10"
-              onClick={() => window.open("https://twitter.com/your_profile", "_blank")}
-            >
-              <Twitter className="w-5 h-5" />
-              Twitter
+              <ChevronRight className="w-5 h-5" />
+              Link 2
             </Button>
           </div>
         </div>
