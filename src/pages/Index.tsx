@@ -1,7 +1,7 @@
 
 import MatrixRain from "@/components/MatrixRain";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, Telegram, TiktokIcon } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -68,23 +68,16 @@ const Index = () => {
               >
                 Iniciar Jornada
               </Button>
-              <Button
-                variant="outline"
-                className="border-matrix-green text-matrix-green hover:bg-matrix-green/10 font-mono text-lg px-8 py-6"
-                onClick={() => window.open("#tokens", "_self")}
-              >
-                Ver Tokens
-              </Button>
             </div>
           ) : (
             <div className="space-y-6">
               <h2 className="text-matrix-green font-mono text-xl mb-4 animate-glow">
                 Escolha seu Caminho
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Button
                   variant="outline"
-                  className="flex-1 flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
+                  className="flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
                   onClick={() => handleRedirect("https://twitter.com/seu_perfil")}
                 >
                   <ArrowRight className="w-5 h-5" />
@@ -92,11 +85,19 @@ const Index = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="flex-1 flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
-                  onClick={() => handleRedirect("https://seu_site.com")}
+                  className="flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
+                  onClick={() => handleRedirect("https://t.me/seu_canal")}
                 >
-                  <ChevronRight className="w-5 h-5" />
-                  Site Oficial
+                  <Telegram className="w-5 h-5" />
+                  Telegram
+                </Button>
+                <Button
+                  variant="outline"
+                  className="flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
+                  onClick={() => handleRedirect("https://tiktok.com/@seu_perfil")}
+                >
+                  <TiktokIcon className="w-5 h-5" />
+                  TikTok
                 </Button>
               </div>
               
