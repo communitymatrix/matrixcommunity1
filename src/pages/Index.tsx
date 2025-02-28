@@ -54,11 +54,10 @@ const Index = () => {
             Bem-vindo ao Sistema
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 font-mono">
-            Entre na Matrix
+            Desperte para a Verdade
           </h1>
           <p className="text-gray-300 mb-8 leading-relaxed">
-            Descubra um novo nível de realidade digital. Nossa plataforma oferece uma
-            experiência única e imersiva, conectando você ao futuro da tecnologia.
+            Descubra como a realidade digital realmente funciona. Nossa plataforma revela os segredos por trás do sistema, conectando você ao futuro da tecnologia e te dando as chaves para escapar da Matrix.
           </p>
           
           {!showJourney ? (
