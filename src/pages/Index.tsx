@@ -1,7 +1,7 @@
 
 import MatrixRain from "@/components/MatrixRain";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Telegram, TiktokIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -88,7 +88,7 @@ const Index = () => {
                   className="flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
                   onClick={() => handleRedirect("https://t.me/seu_canal")}
                 >
-                  <Telegram className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" />
                   Telegram
                 </Button>
                 <Button
@@ -96,7 +96,7 @@ const Index = () => {
                   className="flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
                   onClick={() => handleRedirect("https://tiktok.com/@seu_perfil")}
                 >
-                  <TiktokIcon className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" />
                   TikTok
                 </Button>
               </div>
@@ -167,15 +167,19 @@ const Index = () => {
             </div>
           )}
 
-          {/* Seção de Tokens - Link Único */}
+          {/* Área para contratos de próximos lançamentos */}
           <div id="tokens" className="mt-12">
-            <Button
-              variant="outline"
-              className="w-full border-matrix-green text-matrix-green hover:bg-matrix-green/10 font-mono py-4"
-              onClick={() => window.open("https://etherscan.io/tokens", "_blank")}
-            >
-              Ver Todos os Tokens da Comunidade
-            </Button>
+            <div className="border border-matrix-green/20 bg-black/50 p-4 rounded-lg">
+              <h3 className="text-matrix-green font-mono text-lg mb-3">Contratos para próximos lançamentos</h3>
+              <div className="font-mono text-gray-300 bg-black/70 p-3 rounded overflow-x-auto">
+                {Object.entries(communityTokens).map(([name, address]) => (
+                  <div key={name} className="mb-2">
+                    <span className="text-matrix-green mr-2">{name}:</span>
+                    <code className="text-white break-all">{address}</code>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Nota sobre futura integração com carteiras */}
