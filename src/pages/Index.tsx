@@ -50,6 +50,9 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8 md:py-16 relative z-10">
         {/* SEO Meta Tags seriam adicionados no head do documento */}
         <div className="max-w-2xl mx-auto bg-black/30 backdrop-blur-md p-6 md:p-8 rounded-lg border border-matrix-green/20 animate-fade-in">
+          <div className="text-center mb-6">
+            <span className="text-matrix-green font-mono text-xl font-bold animate-glow">Matrix Community</span>
+          </div>
           <span className="inline-block text-matrix-green text-sm font-mono mb-2 animate-glow">
             Bem-vindo ao Sistema
           </span>
@@ -74,7 +77,7 @@ const Index = () => {
               <h2 className="text-matrix-green font-mono text-xl mb-4 animate-glow">
                 Escolha seu Caminho
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 <Button
                   variant="outline"
                   className="flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
@@ -98,6 +101,14 @@ const Index = () => {
                 >
                   <ArrowRight className="w-5 h-5" />
                   TikTok
+                </Button>
+                <Button
+                  variant="outline"
+                  className="flex items-center justify-center gap-2 border-matrix-green text-matrix-green hover:bg-matrix-green/10 py-6"
+                  onClick={() => handleRedirect("https://discord.gg/seu_servidor")}
+                >
+                  <ArrowRight className="w-5 h-5" />
+                  Discord
                 </Button>
               </div>
               
